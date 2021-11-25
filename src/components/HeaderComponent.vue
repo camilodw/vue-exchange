@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
     <div class="container-fluid">
-      <icon-component/>
+      <icon-component />
       <button
         class="navbar-toggler"
         type="button"
