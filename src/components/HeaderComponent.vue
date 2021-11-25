@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <icon-component />
+      <icon-component/>
       <button
         class="navbar-toggler"
         type="button"
@@ -30,7 +30,7 @@
   </nav>
 </template>
 <script>
-import { IconComponent } from "@/components/IconComponent.vue";
+import IconComponent from "@/components/IconComponent";
 export default {
   name: "Header",
   components: { IconComponent },
