@@ -1,33 +1,34 @@
 <template>
-  <table class="table">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Nombre</th>
-        <th scope="col">Precio</th>
-        <th scope="col">Cap. de Mercado</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-10 table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+              <th></th>
+              <th scope="col">Rank</th>
+              <th scope="col">Symbol</th>
+              <th scope="col">Name</th>
+              <th scope="col">Cap. de Mercado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="a in assets" :key="a.id">
+              <td>
+                <img
+                  :src="`https://static.coincap.io/assets/icons/${a.symbol.toLowerCase()}@2x.png`"
+                />
+              </td>
+              <td>{{ a.rank }}</td>
+              <td>{{ a.symbol }}</td>
+              <td>{{ a.name }}</td>
+              <td>{{ a.marketCapUsd | dollarFilter }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
